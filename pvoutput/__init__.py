@@ -22,8 +22,8 @@ class PvOutputApi(object):
 
         parameters = {
             'c': "1" if self.cumulative else "0",
-            'd': "%Y%m%d".format(time),
-            't': "%H:%m".format(time)
+            'd': time.strftime("%Y%m%d"),
+            't': time.strftime("%H:%M")
         }
 
         if energy_generation:
